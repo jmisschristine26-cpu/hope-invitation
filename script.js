@@ -1,7 +1,14 @@
-// Hope's Storybook Invitation
-
 const openBtn = document.getElementById("openBtn");
+const welcome = document.getElementById("welcome");
 
-openBtn.addEventListener("click", () => {
-    alert("Welcome to Hope's magical story! 🌈✨\n\nThe full interactive invitation is coming next!");
+openBtn.addEventListener("click", function () {
+
+    welcome.classList.remove("hidden");
+
+    openBtn.style.display = "none";
+
+    welcome.scrollIntoView({
+        behavior: "smooth"
+    });
+
 });
