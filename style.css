@@ -1,266 +1,417 @@
+/* ===================================================
+   HOPE'S CHRISTENING & 1ST BIRTHDAY INVITATION
+   Pastel Storybook Theme
+=================================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
-    font-family:'Fredoka',sans-serif;
-    background:linear-gradient(to bottom,#fbe9ff,#fff9fd);
-    overflow-x:hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* Background */
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#5d5575;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffeef8 0%,
+        #eef8ff 30%,
+        #f6f3ff 60%,
+        #ffffff 100%
+    );
+
+    overflow-x:hidden;
+
+}
+
+/* ===============================
+   SKY
+================================*/
 
 .sky{
-    min-height:100vh;
-    position:relative;
+
+    position:fixed;
+
+    inset:0;
+
     overflow:hidden;
-    padding:40px 20px;
-}
 
-/* Floating Decorations */
-
-.sun,
-.rainbow,
-.sparkle,
-.balloon,
-.cloud{
-    position:absolute;
-    animation:float 5s ease-in-out infinite;
-    user-select:none;
     pointer-events:none;
+
+    z-index:-1;
+
 }
 
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
-}
-
-/* Decorations */
+/* ===============================
+   SUN
+================================*/
 
 .sun{
-    top:40px;
-    left:30px;
-    font-size:55px;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:#FFE27A;
+
+    position:absolute;
+
+    top:50px;
+
+    right:70px;
+
+    box-shadow:
+    0 0 60px rgba(255,210,60,.6);
+
 }
 
-.rainbow{
-    top:70px;
-    right:15px;
-    font-size:55px;
-}
+/* ===============================
+   CLOUDS
+================================*/
 
-.s1{
-    top:170px;
-    left:55px;
-    font-size:28px;
-}
+.cloud{
 
-.s2{
-    top:430px;
-    right:120px;
-    font-size:28px;
-}
+    position:absolute;
 
-.s3{
-    top:920px;
-    left:35px;
-    font-size:28px;
-}
-
-.s4{
-    top:1160px;
-    right:25px;
-    font-size:28px;
-}
-
-.b1{
-    top:380px;
-    right:20px;
-    font-size:50px;
-}
-
-.b2{
-    top:830px;
-    left:20px;
-    font-size:48px;
-}
-
-.b3{
-    bottom:40px;
-    right:25px;
-    font-size:50px;
-}
-
-.c1{
-    top:195px;
-    left:62%;
-    font-size:34px;
-}
-
-.c2{
-    display:none;
-}
-
-/* Invitation Card */
-
-.storybook{
-    max-width:700px;
-    margin:120px auto 80px;
     background:white;
-    border-radius:40px;
-    padding:50px 30px;
+
+    width:180px;
+
+    height:60px;
+
+    border-radius:100px;
+
+    opacity:.8;
+
+    animation:floatCloud 35s linear infinite;
+
+}
+
+.cloud::before,
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+
+}
+
+.cloud::before{
+
+    width:70px;
+    height:70px;
+
+    left:25px;
+    top:-25px;
+
+}
+
+.cloud::after{
+
+    width:90px;
+    height:90px;
+
+    right:20px;
+    top:-40px;
+
+}
+
+.cloud1{
+
+    top:80px;
+    left:-200px;
+
+}
+
+.cloud2{
+
+    top:250px;
+    left:-350px;
+
+    animation-delay:10s;
+
+}
+
+.cloud3{
+
+    top:420px;
+    left:-250px;
+
+    animation-delay:20s;
+
+}
+
+@keyframes floatCloud{
+
+    from{
+
+        transform:translateX(-300px);
+
+    }
+
+    to{
+
+        transform:translateX(1800px);
+
+    }
+
+}
+
+/* ===============================
+   HERO
+================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.hero-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    padding:40px;
+
     text-align:center;
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-    position:relative;
-    z-index:10;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
 }
 
-.opening{
-    font-size:20px;
-    color:#666;
-    margin-bottom:15px;
+.intro{
+
+    color:#b96ed4;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
 }
 
-h1{
+.hero h1{
+
     font-family:'Great Vibes',cursive;
-    font-size:82px;
-    color:#cf67e8;
-    margin-bottom:25px;
-    text-shadow:
-        0 0 10px rgba(207,103,232,.35),
-        0 0 25px rgba(207,103,232,.25);
-}
 
-/* Photo */
+    font-size:5rem;
+
+    color:#d76fb4;
+
+    margin-bottom:15px;
+
+}
 
 .photo-frame{
-    width:270px;
-    height:270px;
-    margin:0 auto 30px;
+
+    width:260px;
+
+    height:260px;
+
+    margin:25px auto;
+
     border-radius:50%;
-    overflow:hidden;
-    border:10px solid white;
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    padding:8px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd6ec,
+        #d9f4ff,
+        #f5e4ff
+    );
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
 }
 
 .photo-frame img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
+    border-radius:50%;
+
 }
 
-/* Text */
+.hero h2{
 
-.subtitle{
-    font-size:22px;
-    color:#666;
-    margin-bottom:18px;
+    font-size:1.8rem;
+
+    color:#7f67b0;
+
+    margin-bottom:15px;
+
 }
 
-.date{
-    font-size:26px;
-    color:#d64fc9;
-    font-weight:bold;
-    margin-bottom:30px;
+.hero h2 span{
+
+    color:#ff8eb8;
+
 }
 
-/* Button */
+.hero-date{
+
+    margin-bottom:10px;
+
+    font-size:1.1rem;
+
+}
+
+.hero-location{
+
+    color:#777;
+
+    margin-bottom:25px;
+
+}
 
 button{
-    background:linear-gradient(90deg,#c84df3,#b23cf0);
-    color:white;
+
     border:none;
-    padding:18px 45px;
-    border-radius:50px;
-    font-size:26px;
+
+    background:#ff9bc7;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
     cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
     transition:.3s;
-    box-shadow:0 8px 20px rgba(196,77,243,.35);
+
 }
 
 button:hover{
-    transform:translateY(-3px) scale(1.04);
+
+    transform:translateY(-3px);
+
+    background:#ff7fb6;
+
 }
 
-/* Welcome Section */
+.scroll-note{
 
-#welcome{
-    max-width:700px;
-    margin:50px auto 80px;
-    padding:30px;
+    margin-top:20px;
+
+    color:#888;
+
+    font-size:.95rem;
+
+}
+
+/* ===============================
+   STORY PAGES
+================================*/
+
+main{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:50px 20px;
+
+}
+
+.page{
+
+    margin:60px 0;
+
+}
+
+.page-content{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.page h2{
+
+    color:#c96fd6;
+
     text-align:center;
-    line-height:1.8;
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
 }
 
-#welcome h2{
-    color:#cf67e8;
-    font-size:40px;
+.story{
+
+    line-height:1.9;
+
+    text-align:center;
+
     margin-bottom:20px;
+
 }
 
-#welcome p{
-    font-size:20px;
-    color:#555;
-    margin-bottom:15px;
-}
+blockquote{
 
-.hidden{
-    display:none;
-}
+    margin-top:30px;
 
-/* Mobile */
+    background:#fff5fc;
 
-@media(max-width:600px){
+    border-left:6px solid #f5b2d9;
 
-.storybook{
-    margin:90px 18px 50px;
-    padding:35px 20px;
-}
+    padding:25px;
 
-h1{
-    font-size:72px;
-}
+    border-radius:20px;
 
-.photo-frame{
-    width:220px;
-    height:220px;
-}
+    text-align:center;
 
-.subtitle{
-    font-size:18px;
-}
+    font-style:italic;
 
-.date{
-    font-size:22px;
-}
-
-button{
-    width:100%;
-    font-size:18px;
-    padding:16px;
-}
-
-.sun{
-    font-size:45px;
-}
-
-.rainbow{
-    font-size:45px;
-}
-
-.b1,
-.b2,
-.b3{
-    font-size:42px;
-}
-
-.sparkle{
-    font-size:22px;
-}
-
-.cloud{
-    font-size:28px;
-}
 }
