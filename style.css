@@ -6,9 +6,11 @@
 
 body{
     font-family:'Fredoka',sans-serif;
-    background:linear-gradient(#fbe9ff,#fff7fd);
+    background:linear-gradient(to bottom,#fbe9ff,#fff9fd);
     overflow-x:hidden;
 }
+
+/* Background */
 
 .sky{
     min-height:100vh;
@@ -26,69 +28,121 @@ body{
 .cloud{
     position:absolute;
     animation:float 5s ease-in-out infinite;
+    user-select:none;
+    pointer-events:none;
 }
-
-.sun{
-    top:30px;
-    left:30px;
-    font-size:42px;
-}
-
-.rainbow{
-    top:90px;
-    right:35px;
-    font-size:42px;
-}
-
-.s1{top:140px;left:15%;}
-.s2{top:240px;right:20%;}
-.s3{top:430px;left:8%;}
-.s4{top:520px;right:10%;}
-
-.b1{top:220px;left:85%;font-size:40px;}
-.b2{top:470px;left:10%;font-size:35px;}
-.b3{top:700px;right:12%;font-size:38px;}
-
-.c1{top:180px;left:55%;}
-.c2{top:620px;right:40%;}
 
 @keyframes float{
     0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
+    50%{transform:translateY(-12px);}
+}
+
+/* Decorations */
+
+.sun{
+    top:40px;
+    left:30px;
+    font-size:55px;
+}
+
+.rainbow{
+    top:70px;
+    right:15px;
+    font-size:55px;
+}
+
+.s1{
+    top:170px;
+    left:55px;
+    font-size:28px;
+}
+
+.s2{
+    top:430px;
+    right:120px;
+    font-size:28px;
+}
+
+.s3{
+    top:920px;
+    left:35px;
+    font-size:28px;
+}
+
+.s4{
+    top:1160px;
+    right:25px;
+    font-size:28px;
+}
+
+.b1{
+    top:380px;
+    right:20px;
+    font-size:50px;
+}
+
+.b2{
+    top:830px;
+    left:20px;
+    font-size:48px;
+}
+
+.b3{
+    bottom:40px;
+    right:25px;
+    font-size:50px;
+}
+
+.c1{
+    top:195px;
+    left:62%;
+    font-size:34px;
+}
+
+.c2{
+    display:none;
 }
 
 /* Invitation Card */
 
 .storybook{
-    max-width:420px;
-    margin:70px auto;
+    max-width:700px;
+    margin:120px auto 80px;
     background:white;
-    border-radius:35px;
-    padding:35px;
+    border-radius:40px;
+    padding:50px 30px;
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    position:relative;
+    z-index:10;
 }
 
 .opening{
+    font-size:20px;
     color:#666;
-    font-size:18px;
+    margin-bottom:15px;
 }
 
 h1{
     font-family:'Great Vibes',cursive;
-    font-size:72px;
+    font-size:82px;
     color:#cf67e8;
-    margin:15px 0;
+    margin-bottom:25px;
+    text-shadow:
+        0 0 10px rgba(207,103,232,.35),
+        0 0 25px rgba(207,103,232,.25);
 }
 
+/* Photo */
+
 .photo-frame{
-    width:240px;
-    height:240px;
-    margin:25px auto;
+    width:270px;
+    height:270px;
+    margin:0 auto 30px;
     border-radius:50%;
     overflow:hidden;
-    border:8px solid white;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    border:10px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
 }
 
 .photo-frame img{
@@ -97,60 +151,116 @@ h1{
     object-fit:cover;
 }
 
+/* Text */
+
 .subtitle{
-    color:#777;
-    font-size:18px;
+    font-size:22px;
+    color:#666;
+    margin-bottom:18px;
 }
 
 .date{
-    margin-top:12px;
-    font-size:22px;
-    color:#d14dbb;
+    font-size:26px;
+    color:#d64fc9;
     font-weight:bold;
+    margin-bottom:30px;
 }
 
+/* Button */
+
 button{
-    margin-top:28px;
-    background:#d96df4;
+    background:linear-gradient(90deg,#c84df3,#b23cf0);
     color:white;
     border:none;
-    padding:15px 30px;
+    padding:18px 45px;
     border-radius:50px;
-    font-size:18px;
+    font-size:26px;
     cursor:pointer;
     transition:.3s;
+    box-shadow:0 8px 20px rgba(196,77,243,.35);
 }
 
 button:hover{
-    transform:scale(1.05);
-    background:#c14ee5;
+    transform:translateY(-3px) scale(1.04);
 }
+
+/* Welcome Section */
 
 #welcome{
     max-width:700px;
-    margin:60px auto;
+    margin:50px auto 80px;
     padding:30px;
     text-align:center;
+    line-height:1.8;
+}
+
+#welcome h2{
+    color:#cf67e8;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+#welcome p{
+    font-size:20px;
+    color:#555;
+    margin-bottom:15px;
 }
 
 .hidden{
     display:none;
 }
 
+/* Mobile */
+
 @media(max-width:600px){
 
 .storybook{
-    margin:30px 15px;
-    padding:25px;
+    margin:90px 18px 50px;
+    padding:35px 20px;
 }
 
 h1{
-    font-size:58px;
+    font-size:72px;
 }
 
 .photo-frame{
-    width:200px;
-    height:200px;
+    width:220px;
+    height:220px;
 }
 
+.subtitle{
+    font-size:18px;
+}
+
+.date{
+    font-size:22px;
+}
+
+button{
+    width:100%;
+    font-size:18px;
+    padding:16px;
+}
+
+.sun{
+    font-size:45px;
+}
+
+.rainbow{
+    font-size:45px;
+}
+
+.b1,
+.b2,
+.b3{
+    font-size:42px;
+}
+
+.sparkle{
+    font-size:22px;
+}
+
+.cloud{
+    font-size:28px;
+}
 }
