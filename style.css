@@ -170,3 +170,8 @@ h1{
     font-size:20px;
     cursor:pointer;
 }
+
+
+.hidden{
+    display:none;
+}
