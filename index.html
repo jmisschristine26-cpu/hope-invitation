@@ -183,7 +183,7 @@
         </div>
 
         <!-- Final Page -->
-        <div class="story-card">
+        <div class="story-card final-page">
 
     <div class="page-sparkles">
         ✨ ✨ ✨
@@ -242,6 +242,45 @@
     50%{
         opacity:1;
         transform:scale(1.2);
+    }
+
+}
+
+/* =========================
+   FINAL PAGE CELEBRATION
+========================= */
+
+.final-page{
+    position:relative;
+    overflow:hidden;
+}
+
+.final-page::before{
+    content:"🎉 🎊 ✨ 🎈 🎀 🐰 🌸";
+    position:absolute;
+    top:15px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:28px;
+    animation:celebrate 3s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes celebrate{
+
+    0%{
+        transform:translateY(-20px);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(25px);
+        opacity:0;
     }
 
 }
