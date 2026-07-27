@@ -12,15 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showPage(index){
 
-        pages.forEach((page)=>{
-            page.classList.remove("active");
-        });
+    pages.forEach((page)=>{
+        page.classList.remove("active");
+        page.style.opacity = "0";
+    });
 
-        pages[index].classList.add("active");
+    pages[index].classList.add("active");
 
-        prevBtn.disabled = index === 0;
-        nextBtn.disabled = index === pages.length - 1;
-    }
+    setTimeout(()=>{
+        pages[index].style.opacity = "1";
+    },50);
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === pages.length - 1;
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
 
     showPage(currentPage);
 
