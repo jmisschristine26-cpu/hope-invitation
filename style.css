@@ -114,16 +114,29 @@
 /* Photo */
 
 .hero-photo{
-    width:270px;
-    height:270px;
+    width:280px;
+    height:280px;
     object-fit:cover;
     border-radius:50%;
-    border:12px solid white;
-    margin:170px auto 35px;
     display:block;
 
+    margin:135px auto 35px;
+
+    border:12px solid #fff;
+
     box-shadow:
-        0 10px 35px rgba(0,0,0,.15);
+        0 18px 45px rgba(0,0,0,.18);
+
+    animation:floatPhoto 4s ease-in-out infinite;
+}
+
+@keyframes floatPhoto{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
 }
 
 /* Headline */
