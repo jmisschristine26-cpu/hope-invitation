@@ -382,7 +382,7 @@ h1{
 
 .story-card.active{
     display:block;
-    animation:pagePop .7s ease;
+    animation:pageTurn .7s ease forwards;
 }
 
 @keyframes pagePop{
