@@ -1,24 +1,24 @@
-alert("JavaScript is loading!");
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const openButton = document.getElementById("openBook");
-   
-    console.log(openButton);
-
-alert(openButton ? "Button found!" : "Button NOT found!");
-    
+    const cover = document.querySelector(".cover");
     const storybook = document.getElementById("storybook");
+    const openBook = document.getElementById("openBook");
 
-    openButton.addEventListener("click", function () {
+    openBook.addEventListener("click", () => {
 
-        storybook.style.display = "block";
+        cover.style.opacity = "0";
 
-        storybook.scrollIntoView({
-            behavior: "smooth"
-        });
+        setTimeout(() => {
+            cover.style.display = "none";
+            storybook.classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }, 600);
 
     });
 
 });
-
