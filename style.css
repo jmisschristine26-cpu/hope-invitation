@@ -529,3 +529,39 @@ h1{
 
 }
 
+/* =========================
+   BOOK NAVIGATION
+========================= */
+
+.book-navigation{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin:40px auto 60px;
+}
+
+.book-navigation button{
+    background:linear-gradient(135deg,#ff7bc4,#ff4fa3);
+    color:white;
+    border:none;
+    border-radius:50px;
+    padding:15px 35px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:all .3s ease;
+    box-shadow:0 10px 25px rgba(255,105,180,.35);
+}
+
+.book-navigation button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(255,105,180,.45);
+}
+
+.book-navigation button:disabled{
+    opacity:.45;
+    cursor:not-allowed;
+    transform:none;
+    box-shadow:none;
+}
