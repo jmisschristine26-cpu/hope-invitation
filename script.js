@@ -1,3 +1,5 @@
+alert("JavaScript is loading!");
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const openButton = document.getElementById("openBook");
