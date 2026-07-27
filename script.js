@@ -4,13 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openButton.addEventListener("click", function () {
 
-        alert(
-`Welcome!
+        alert(`Welcome!
 
 We are delighted to invite you to celebrate Hope Jelizabeth Azaniah M. Frias' Christening and 1st Birthday.
 
-This is only the beginning of her storybook... 💖`
-        );
+This is only the beginning of her storybook... 💖`);
 
     });
 
