@@ -1,14 +1,11 @@
-const openBtn = document.getElementById("openBtn");
-const welcome = document.getElementById("welcome");
+const openButton = document.getElementById("openBook");
 
-openBtn.addEventListener("click", function () {
+openButton.addEventListener("click", function () {
+    alert(
+`Welcome!
 
-    welcome.classList.remove("hidden");
+We are delighted to invite you to celebrate Hope Jelizabeth Azaniah M. Frias' Christening and 1st Birthday.
 
-    openBtn.style.display = "none";
-
-    welcome.scrollIntoView({
-        behavior: "smooth"
-    });
-
+This is only the beginning of her storybook... 💖`
+    );
 });
