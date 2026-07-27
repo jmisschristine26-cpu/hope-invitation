@@ -443,3 +443,22 @@ h1{
     opacity:1;
     transition:opacity .6s ease;
 }
+
+#storybook{
+    opacity:1;
+    animation:bookFade .8s ease;
+}
+
+@keyframes bookFade{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
