@@ -599,3 +599,25 @@ h1{
     right:20px;
     font-size:30px;
 }
+
+.page-sparkles{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:22px;
+    opacity:.75;
+    animation:twinkle 2.5s infinite ease-in-out;
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.4;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
