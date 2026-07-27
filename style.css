@@ -113,7 +113,7 @@
 
 /* Photo */
 
-.photo-frame img{
+.photo-frame {
     width:280px;
     height:280px;
     object-fit:cover;
