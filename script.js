@@ -12,7 +12,7 @@ alert(openButton ? "Button found!" : "Button NOT found!");
 
     openButton.addEventListener("click", function () {
 
-        storybook.classList.add("show");
+        storybook.style.display = "block";
 
         storybook.scrollIntoView({
             behavior: "smooth"
