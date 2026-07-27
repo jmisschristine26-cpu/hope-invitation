@@ -53,6 +53,10 @@
         <!-- Page 1 -->
         <div class="story-card active">
 
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
+
             <img src="hope1.jpg" class="story-photo" alt="Hope">
 
             <h2>✨ Once Upon a Time...</h2>
@@ -73,6 +77,10 @@
 
         <!-- Page 2 -->
         <div class="story-card">
+
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
 
             <img src="hope2.JPEG" class="story-photo" alt="Hope">
 
@@ -99,6 +107,10 @@
         <!-- Page 3 -->
         <div class="story-card">
 
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
+
             <img src="hope3.JPEG" class="story-photo" alt="Hope">
 
             <h2>👑 Our Little Princess</h2>
@@ -120,6 +132,10 @@
         <!-- Page 4 -->
         <div class="story-card">
 
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
+
             <img src="hope4.JPEG" class="story-photo" alt="Hope">
 
             <h2>🎉 One Wonderful Year</h2>
@@ -140,6 +156,10 @@
 
         <!-- Page 5 -->
         <div class="story-card">
+
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
 
             <img src="hope.jpg" class="story-photo" alt="Hope">
 
@@ -164,6 +184,10 @@
 
         <!-- Final Page -->
         <div class="story-card">
+
+    <div class="page-sparkles">
+        ✨ ✨ ✨
+    </div>
 
             <h2>✝ Romans 15:13</h2>
 
@@ -197,3 +221,27 @@
 
 </body>
 </html>
+
+.page-sparkles{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:22px;
+    opacity:.75;
+    animation:twinkle 2.5s infinite ease-in-out;
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.4;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+}
