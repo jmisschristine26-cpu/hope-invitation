@@ -2,14 +2,19 @@
    COVER PAGE
 ========================= */
 
-.hero {
-    position: relative;
-    min-height: 100vh;
-    padding: 40px 20px 60px;
-    text-align: center;
-    overflow: hidden;
+.hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
 
-    background: linear-gradient(
+    padding:40px 20px 70px;
+
+    background:linear-gradient(
         to bottom,
         #ddd4ff 0%,
         #fbe6ef 55%,
